@@ -9,7 +9,7 @@ export default function Auth() {
 
   const navigate = useNavigate();
 
-  const { signUp, user, logout, login } = useAuth();
+  const { signUp, login } = useAuth();
 
   const {
     register,
@@ -38,8 +38,6 @@ export default function Auth() {
     <div className="page">
       <div className="container">
         <div className="auth-container">
-          {user && <p>User logged in {user.email}</p>}
-          <button onClick={logout}>Logout</button>
           <h1 className="page-title">
             {mode === "signup" ? "Sign Up" : "Login"}
           </h1>
